@@ -1,0 +1,219 @@
+{
+  "lastUpdated": "2024-03-15T10:00:00Z",
+  "restaurant": {
+    "name": "Happy GB Mountain Foods",
+    "location": "Shop No. 3, Afandi Colony, Sadiqabad, Rawalpindi, Pakistan",
+    "cuisine": "Gilgit-Baltistan Traditional",
+    "description": "Authentic mountain cuisine from the northern areas of Pakistan"
+  },
+  "categories": {
+    "dumplings": {
+      "name": "Momos & Dumplings",
+      "description": "Traditional steamed and fried dumplings from the mountains",
+      "items": [
+        {
+          "id": "dump-001",
+          "name": "Traditional Momos",
+          "description": "Steamed dumplings filled with seasoned yak meat and vegetables, served with spicy chutney",
+          "price": 450,
+          "currency": "PKR",
+          "image": "/images/traditional-momos.jpg",
+          "dietary": ["halal"],
+          "allergens": ["gluten"],
+          "available": true,
+          "spiceLevel": "medium",
+          "region": "Hunza Valley",
+          "foodpandaUrl": "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/dump-001"
+        },
+        {
+          "id": "dump-002",
+          "name": "Vegetable Momos",
+          "description": "Steamed dumplings stuffed with fresh mountain vegetables and herbs",
+          "price": 350,
+          "currency": "PKR",
+          "image": "/images/vegetable-momos.jpg",
+          "dietary": ["vegetarian", "halal"],
+          "allergens": ["gluten"],
+          "available": true,
+          "spiceLevel": "mild",
+          "region": "Skardu",
+          "foodpandaUrl": "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/dump-002"
+        },
+        {
+          "id": "dump-003",
+          "name": "Fried Momos",
+          "description": "Crispy fried dumplings with meat filling, served with tangy dipping sauce",
+          "price": 500,
+          "currency": "PKR",
+          "image": "/images/fried-momos.jpg",
+          "dietary": ["halal"],
+          "allergens": ["gluten"],
+          "available": true,
+          "spiceLevel": "medium",
+          "region": "Gilgit",
+          "foodpandaUrl": "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/dump-003"
+        }
+      ]
+    },
+    "noodles": {
+      "name": "Lagman & Noodles",
+      "description": "Hand-pulled noodles in rich broths with traditional spices",
+      "items": [
+        {
+          "id": "nood-001",
+          "name": "Authentic Lagman",
+          "description": "Hand-pulled noodles in rich mutton broth with fresh vegetables and aromatic spices",
+          "price": 650,
+          "currency": "PKR",
+          "image": "/images/authentic-lagman.jpg",
+          "dietary": ["halal"],
+          "allergens": ["gluten"],
+          "available": true,
+          "spiceLevel": "medium",
+          "region": "Kashgar influence",
+          "foodpandaUrl": "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/nood-001"
+        },
+        {
+          "id": "nood-002",
+          "name": "Vegetable Lagman",
+          "description": "Traditional hand-pulled noodles in vegetable broth with seasonal mountain vegetables",
+          "price": 550,
+          "currency": "PKR",
+          "image": "/images/vegetable-lagman.jpg",
+          "dietary": ["vegetarian", "halal"],
+          "allergens": ["gluten"],
+          "available": true,
+          "spiceLevel": "mild",
+          "region": "Baltistan",
+          "foodpandaUrl": "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/nood-002"
+        },
+        {
+          "id": "nood-003",
+          "name": "Chicken Lagman",
+          "description": "Hearty noodle soup with tender chicken pieces and traditional GB spices",
+          "price": 600,
+          "currency": "PKR",
+          "image": "/images/chicken-lagman.jpg",
+          "dietary": ["halal"],
+          "allergens": ["gluten"],
+          "available": true,
+          "spiceLevel": "medium",
+          "region": "Ghizer Valley",
+          "foodpandaUrl": "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/nood-003"
+        }
+      ]
+    },
+    "breads": {
+      "name": "Traditional Breads",
+      "description": "Authentic breads baked in traditional clay ovens",
+      "items": [
+        {
+          "id": "bread-001",
+          "name": "Fresh Daw Daw",
+          "description": "Traditional Balti flatbread baked in clay oven, served with local butter and honey",
+          "price": 250,
+          "currency": "PKR",
+          "image": "/images/fresh-daw-daw.jpg",
+          "dietary": ["vegetarian", "halal"],
+          "allergens": ["gluten", "dairy"],
+          "available": true,
+          "spiceLevel": "none",
+          "region": "Baltistan",
+          "foodpandaUrl": "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/bread-001"
+        },
+        {
+          "id": "bread-002",
+          "name": "Khameeri Roti",
+          "description": "Soft leavened bread perfect with curries and stews",
+          "price": 80,
+          "currency": "PKR",
+          "image": "/images/khameeri-roti.jpg",
+          "dietary": ["vegetarian", "halal"],
+          "allergens": ["gluten"],
+          "available": true,
+          "spiceLevel": "none",
+          "region": "General GB",
+          "foodpandaUrl": "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/bread-002"
+        },
+        {
+          "id": "bread-003",
+          "name": "Chapshoro",
+          "description": "Stuffed bread with spiced meat filling, a Hunza specialty",
+          "price": 400,
+          "currency": "PKR",
+          "image": "/images/chapshoro.jpg",
+          "dietary": ["halal"],
+          "allergens": ["gluten"],
+          "available": true,
+          "spiceLevel": "medium",
+          "region": "Hunza Valley",
+          "foodpandaUrl": "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/bread-003"
+        }
+      ]
+    },
+    "beverages": {
+      "name": "Mountain Beverages",
+      "description": "Traditional drinks from the high altitudes",
+      "items": [
+        {
+          "id": "bev-001",
+          "name": "Butter Tea (Po Cha)",
+          "description": "Traditional Tibetan-style salted butter tea, perfect for mountain weather",
+          "price": 150,
+          "currency": "PKR",
+          "image": "/images/butter-tea.jpg",
+          "dietary": ["vegetarian", "halal"],
+          "allergens": ["dairy"],
+          "available": true,
+          "spiceLevel": "none",
+          "region": "Tibetan influence",
+          "foodpandaUrl": "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/bev-001"
+        },
+        {
+          "id": "bev-002",
+          "name": "Hunza Apricot Juice",
+          "description": "Fresh juice from Hunza's famous apricots, rich in vitamins and natural sweetness",
+          "price": 200,
+          "currency": "PKR",
+          "image": "/images/apricot-juice.jpg",
+          "dietary": ["vegetarian", "vegan", "halal"],
+          "allergens": [],
+          "available": true,
+          "spiceLevel": "none",
+          "region": "Hunza Valley",
+          "foodpandaUrl": "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/bev-002"
+        },
+        {
+          "id": "bev-003",
+          "name": "Kashmiri Chai",
+          "description": "Pink tea with almonds and cardamom, a regional favorite",
+          "price": 120,
+          "currency": "PKR",
+          "image": "/images/kashmiri-chai.jpg",
+          "dietary": ["vegetarian", "halal"],
+          "allergens": ["dairy", "nuts"],
+          "available": true,
+          "spiceLevel": "none",
+          "region": "Kashmir influence",
+          "foodpandaUrl": "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/bev-003"
+        }
+      ]
+    }
+  },
+  "cultural_info": {
+    "about_gb": "Gilgit-Baltistan is a mountainous region in northern Pakistan, known for its stunning landscapes and rich cultural heritage. The cuisine reflects influences from Central Asia, Tibet, and traditional Pakistani flavors.",
+    "cooking_methods": [
+      "Clay oven baking",
+      "Hand-pulled noodle making",
+      "Traditional steaming techniques",
+      "High-altitude cooking adaptations"
+    ],
+    "key_ingredients": [
+      "Yak meat (where available)",
+      "Mountain vegetables",
+      "Traditional spices",
+      "Local dairy products",
+      "Apricots and dried fruits"
+    ]
+  }
+}
