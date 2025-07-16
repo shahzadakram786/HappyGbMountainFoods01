@@ -8,23 +8,39 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, Phone } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 
+// 🧭 NAVIGATION MENU ITEMS
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Menu", href: "/menu" },
   { name: "About", href: "/about" },
-  { name: "Reservations", href: "/reservations" },
+  // { name: "Reservations", href: "/reservations" },
   { name: "Contact", href: "/contact" },
   { name: "Blog", href: "/blog" },
 ]
 
+/**
+ * 🧭 NAVBAR COMPONENT
+ *
+ * Responsive navigation header with:
+ * - Logo and brand name
+ * - Desktop navigation menu
+ * - Mobile hamburger menu
+ * - Theme toggle button
+ * - Call-to-action button
+ *
+ * RESPONSIVE BEHAVIOR:
+ * - Desktop: Full menu visible
+ * - Mobile: Hamburger menu with slide-out panel
+ */
 export default function Navbar() {
+  // 📱 MOBILE MENU STATE
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border shadow-sm">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          {/* Logo - Updated with your actual logo */}
+          {/* 🏷️ LOGO SECTION */}
           <Link href="/" className="flex items-center space-x-3">
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GbLogo-BWIUzU0E4XnqgpE3Ice9QmQEK4AZkL.png"
@@ -32,11 +48,12 @@ export default function Navbar() {
               width={40}
               height={40}
               className="object-contain"
+              priority // Load logo immediately
             />
             <span className="font-bold text-xl text-foreground">Happy GB Mountain Foods</span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* 🖥️ DESKTOP NAVIGATION */}
           <div className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
@@ -49,33 +66,44 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Desktop CTA & Theme Toggle */}
+          {/* 🖥️ DESKTOP CTA & THEME TOGGLE */}
           <div className="hidden md:flex items-center space-x-4">
+            {/* 📞 PHONE NUMBER */}
             <a
-              href="tel:+925112345678"
+              href="tel:+923129790711"
               className="flex items-center text-muted-foreground hover:text-primary transition-colors duration-200"
             >
               <Phone className="w-4 h-4 mr-1" />
-              <span className="text-sm">+92 51 123-4567</span>
+              <span className="text-sm">+92 31 2979-0711</span>
             </a>
+
+            {/* 🌙 THEME TOGGLE */}
             <ThemeToggle />
+
+            {/* 🎯 CTA BUTTON */}
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              <Link href="/reservations">Book Table</Link>
+            <Link href="https://www.foodpanda.pk/restaurant/n7sn/gb-mountain-foods">
+                        Place an Order
+                      </Link>
             </Button>
           </div>
 
-          {/* Mobile Menu Button & Theme Toggle */}
+          {/* 📱 MOBILE MENU SECTION */}
           <div className="md:hidden flex items-center space-x-2">
             <ThemeToggle />
+
+            {/* 🍔 HAMBURGER MENU */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" aria-label="Open menu">
                   <Menu className="h-6 w-6" />
-                  <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
+
+              {/* 📱 MOBILE MENU CONTENT */}
               <SheetContent side="right" className="w-80">
                 <div className="flex flex-col h-full">
+                  {/* 📱 MOBILE HEADER */}
                   <div className="flex items-center justify-between pb-4 border-b border-border">
                     <Link href="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
                       <Image
@@ -89,6 +117,7 @@ export default function Navbar() {
                     </Link>
                   </div>
 
+                  {/* 📱 MOBILE NAVIGATION LINKS */}
                   <div className="flex flex-col space-y-4 py-6">
                     {navigation.map((item) => (
                       <Link
@@ -102,6 +131,7 @@ export default function Navbar() {
                     ))}
                   </div>
 
+                  {/* 📱 MOBILE FOOTER */}
                   <div className="mt-auto space-y-4">
                     <a
                       href="tel:+925112345678"
@@ -110,9 +140,10 @@ export default function Navbar() {
                       <Phone className="w-4 h-4 mr-2" />
                       <span>+92 51 123-4567</span>
                     </a>
+
                     <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                      <Link href="/reservations" onClick={() => setIsOpen(false)}>
-                        Book Table
+                      <Link href="https://www.foodpanda.pk/restaurant/n7sn/gb-mountain-foods" onClick={() => setIsOpen(false)}>
+                        Place an Order
                       </Link>
                     </Button>
                   </div>
@@ -127,12 +158,13 @@ export default function Navbar() {
 }
 
 /* 
-EXPLANATION OF CHANGES:
-1. Added your actual logo image using the provided URL
-2. Replaced all green colors (emerald-600) with primary (teal from logo)
-3. Added ThemeToggle component in both desktop and mobile layouts
-4. Updated hover states to use primary color
-5. Used semantic color classes (bg-background, text-foreground) for theme support
-6. Added backdrop blur effect for modern glass-morphism look
-7. Colors now automatically switch between light/dark modes
+📝 EXPLANATION:
+- "use client" makes this interactive (needs JavaScript)
+- Sticky positioning keeps navbar at top when scrolling
+- backdrop-blur creates modern glass effect
+- Responsive design: full menu on desktop, hamburger on mobile
+- Sheet component creates slide-out mobile menu
+- Theme toggle allows switching between light/dark modes
+- All colors use CSS variables (automatically change with theme)
+- Accessibility: aria-labels, semantic HTML, keyboard navigation
 */

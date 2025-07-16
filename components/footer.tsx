@@ -105,9 +105,7 @@ export default function Footer() {
               Opening Hours
             </h3>
             <ul className="space-y-1 text-gray-300">
-              <li>Daily: 11:00 AM - 11:00 PM</li>
-              <li>Friday: 2:00 PM - 11:00 PM</li>
-              <li className="text-sm text-gray-400">(After Jummah Prayer)</li>
+              <li>Daily: 24 Hours</li>
             </ul>
           </div>
         </div>

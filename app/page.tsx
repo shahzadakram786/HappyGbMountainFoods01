@@ -12,7 +12,7 @@ const featuredDishes = [
     name: "Traditional Momos",
     description: "Steamed dumplings filled with seasoned yak meat and vegetables, served with spicy chutney",
     price: 450,
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/dumplings(1).png",
     category: "Main Course",
     dietary: ["halal"],
   },
@@ -21,7 +21,7 @@ const featuredDishes = [
     name: "Authentic Lagman",
     description: "Hand-pulled noodles in rich mutton broth with fresh vegetables and aromatic spices",
     price: 650,
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/laqmanAuthenic.png",
     category: "Main Course",
     dietary: ["halal"],
   },
@@ -30,7 +30,7 @@ const featuredDishes = [
     name: "Fresh Daw Daw",
     description: "Traditional Balti flatbread baked in clay oven, served with local butter and honey",
     price: 250,
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/dawdaw.png",
     category: "Bread",
     dietary: ["vegetarian", "halal"],
   },
@@ -63,7 +63,7 @@ export default function HomePage() {
       {/* Hero Section - Updated colors */}
       <section className="relative h-screen flex items-center justify-center bg-gradient-to-r from-black/60 to-black/40">
         <Image
-          src="/placeholder.svg?height=1080&width=1920"
+          src="/Gilgit-Baltistan-Scenery.png"
           alt="Beautiful mountain landscape of Gilgit-Baltistan with traditional food setup"
           fill
           className="object-cover -z-10"
@@ -85,7 +85,7 @@ export default function HomePage() {
               size="lg"
               className="border-white text-white hover:bg-white hover:text-primary bg-transparent"
             >
-              <Link href="/reservations">Book Your Table</Link>
+              <Link href="#">Place an Order</Link>
             </Button>
           </div>
         </div>
@@ -117,7 +117,7 @@ export default function HomePage() {
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="/gilgitBaltistanCulinaryHeritage.png"
                 alt="Traditional Gilgit-Baltistan kitchen with chef preparing authentic dishes"
                 fill
                 className="object-cover"
@@ -139,7 +139,7 @@ export default function HomePage() {
             {featuredDishes.map((dish) => (
               <Card key={dish.id} className="overflow-hidden hover:shadow-lg transition-shadow bg-card">
                 <div className="relative h-48">
-                  <Image src={dish.image || "/placeholder.svg"} alt={dish.name} fill className="object-cover" />
+                  <Image src={dish.image || "/dumplings(1).png"} alt={dish.name} fill className="object-cover" />
                   <div className="absolute top-2 right-2">
                     {dish.dietary.includes("vegetarian") && (
                       <Badge

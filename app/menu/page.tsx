@@ -46,7 +46,7 @@ const menuData = {
       name: "Authentic Lagman",
       description: "Hand-pulled noodles in rich mutton broth with fresh vegetables and aromatic spices",
       price: 650,
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/laqmanAuthenic.png",
       dietary: ["halal"],
       foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foodss/dish/4",
     },
@@ -55,7 +55,7 @@ const menuData = {
       name: "Vegetable Lagman",
       description: "Traditional hand-pulled noodles in vegetable broth with seasonal mountain vegetables",
       price: 550,
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/laqmanAuthenic.png",
       dietary: ["vegetarian", "halal"],
       foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/5",
     },
@@ -64,7 +64,7 @@ const menuData = {
       name: "Chicken Lagman",
       description: "Hearty noodle soup with tender chicken pieces and traditional GB spices",
       price: 600,
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/laqmanAuthenic.png",
       dietary: ["halal"],
       foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/6",
     },
@@ -75,7 +75,7 @@ const menuData = {
       name: "Fresh Daw Daw",
       description: "Traditional Balti flatbread baked in clay oven, served with local butter and honey",
       price: 250,
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/dawdaw.png",
       dietary: ["vegetarian", "halal"],
       foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/7",
     },
@@ -169,12 +169,12 @@ export default function MenuPage() {
   })
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen ">
       {/* Header */}
-      <section className="bg-white shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-8">
+      <section className="bg-secondary/20 shadow-sm">
+        <div className="max-w-6xl mx-auto px-4 py-8 ">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Authentic GB Mountain Menu</h1>
+            <h1 className="text-4xl font-bold text-gray-400 mb-4">Authentic GB Mountain Menu</h1>
             <p className="text-lg text-gray-600 mb-6">
               Traditional recipes from Gilgit-Baltistan - Updated daily with fresh ingredients
             </p>
@@ -183,8 +183,9 @@ export default function MenuPage() {
         </div>
       </section>
 
+    {/* <section className="flex flex-row items-center py-8"> */}
       {/* Filters */}
-      <section className="bg-white border-b">
+      <section className="bg-background white border-b">
         <div className="max-w-6xl mx-auto px-4 py-6">
           {/* Search */}
           <div className="relative mb-6">
@@ -294,6 +295,8 @@ export default function MenuPage() {
           )}
         </div>
       </section>
+
+    {/* </section>   */}
 
       {/* Order CTA */}
       <section className="bg-amber-600 text-white py-12">

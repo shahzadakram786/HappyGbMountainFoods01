@@ -53,7 +53,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center">
         <Image
-          src="/placeholder.svg?height=400&width=1200"
+          src="/Gilgit-Baltistan Culinary Heritage_simple_compose_01k09hed2jexra5jp0eek837g0.png"
           alt="Beautiful mountain landscape of Gilgit-Baltistan with traditional food setup"
           fill
           className="object-cover brightness-50"
@@ -87,7 +87,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="/Gilgit-Baltistan Culinary Heritage_simple_compose_01k09hed2jexra5jp0eek837g0.png"
                 alt="Traditional kitchen setup with chef preparing authentic GB dishes"
                 fill
                 className="object-cover"
