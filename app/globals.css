@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* LIGHT MODE COLORS - Based on your logo */
+    --background: 0 0% 100%;
+    --foreground: 185 84% 15%; /* Dark teal for text */
+    --card: 0 0% 100%;
+    --card-foreground: 185 84% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 185 84% 15%;
+    --primary: 185 84% 25%; /* Main teal color from logo */
+    --primary-foreground: 48 96% 89%;
+    --secondary: 48 96% 53%; /* Golden yellow from logo */
+    --secondary-foreground: 185 84% 15%;
+    --muted: 185 10% 95%;
+    --muted-foreground: 185 5% 40%;
+    --accent: 48 96% 53%; /* Golden accent */
+    --accent-foreground: 185 84% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 185 20% 90%;
+    --input: 185 20% 90%;
+    --ring: 185 84% 25%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* DARK MODE COLORS - Darker version of logo colors */
+    --background: 185 84% 8%; /* Very dark teal background */
+    --foreground: 48 96% 89%; /* Light golden text */
+    --card: 185 84% 10%;
+    --card-foreground: 48 96% 89%;
+    --popover: 185 84% 10%;
+    --popover-foreground: 48 96% 89%;
+    --primary: 48 96% 53%; /* Golden primary in dark mode */
+    --primary-foreground: 185 84% 15%;
+    --secondary: 185 84% 20%; /* Darker teal secondary */
+    --secondary-foreground: 48 96% 89%;
+    --muted: 185 84% 15%;
+    --muted-foreground: 185 10% 65%;
+    --accent: 48 96% 53%; /* Golden accent remains */
+    --accent-foreground: 185 84% 15%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 185 84% 20%;
+    --input: 185 84% 20%;
+    --ring: 48 96% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* 
+EXPLANATION:
+- CSS custom properties (variables) define colors for light and dark modes
+- Light mode uses white background with dark teal text
+- Dark mode uses dark teal background with golden text
+- Colors are in HSL format for better manipulation
+- These variables are used by Tailwind's color system
+*/

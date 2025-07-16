@@ -1,0 +1,172 @@
+{
+  "lastUpdated": "2024-03-15T10:00:00Z",
+  "categories": {
+    "appetizers": {
+      "name": "Appetizers",
+      "description": "Start your meal with our carefully crafted starters",
+      "items": [
+        {
+          "id": "app-001",
+          "name": "Truffle Arancini",
+          "description": "Crispy risotto balls with truffle oil and parmesan",
+          "price": 14.99,
+          "image": "/images/truffle-arancini.jpg",
+          "dietary": ["vegetarian"],
+          "allergens": ["dairy", "gluten"],
+          "available": true,
+          "foodpandaUrl": "https://foodpanda.com/restaurant/bella-vista/dish/app-001"
+        },
+        {
+          "id": "app-002",
+          "name": "Seared Scallops",
+          "description": "Pan-seared scallops with cauliflower puree and microgreens",
+          "price": 18.99,
+          "image": "/images/seared-scallops.jpg",
+          "dietary": ["gluten-free"],
+          "allergens": ["shellfish"],
+          "available": true,
+          "foodpandaUrl": "https://foodpanda.com/restaurant/bella-vista/dish/app-002"
+        },
+        {
+          "id": "app-003",
+          "name": "Burrata Caprese",
+          "description": "Fresh burrata with heirloom tomatoes and basil oil",
+          "price": 16.99,
+          "image": "/images/burrata-caprese.jpg",
+          "dietary": ["vegetarian", "gluten-free"],
+          "allergens": ["dairy"],
+          "available": true,
+          "foodpandaUrl": "https://foodpanda.com/restaurant/bella-vista/dish/app-003"
+        }
+      ]
+    },
+    "mains": {
+      "name": "Main Courses",
+      "description": "Our signature dishes crafted with the finest ingredients",
+      "items": [
+        {
+          "id": "main-001",
+          "name": "Signature Beef Wellington",
+          "description": "Tender beef wrapped in puff pastry with mushroom duxelles",
+          "price": 32.99,
+          "image": "/images/beef-wellington.jpg",
+          "dietary": [],
+          "allergens": ["gluten", "dairy"],
+          "available": true,
+          "foodpandaUrl": "https://foodpanda.com/restaurant/bella-vista/dish/main-001"
+        },
+        {
+          "id": "main-002",
+          "name": "Pan-Seared Salmon",
+          "description": "Fresh Atlantic salmon with lemon herb butter and seasonal vegetables",
+          "price": 28.99,
+          "image": "/images/pan-seared-salmon.jpg",
+          "dietary": ["gluten-free"],
+          "allergens": ["fish", "dairy"],
+          "available": true,
+          "foodpandaUrl": "https://foodpanda.com/restaurant/bella-vista/dish/main-002"
+        },
+        {
+          "id": "main-003",
+          "name": "Truffle Risotto",
+          "description": "Creamy arborio rice with black truffle and aged parmesan",
+          "price": 24.99,
+          "image": "/images/truffle-risotto.jpg",
+          "dietary": ["vegetarian", "gluten-free"],
+          "allergens": ["dairy"],
+          "available": true,
+          "foodpandaUrl": "https://foodpanda.com/restaurant/bella-vista/dish/main-003"
+        },
+        {
+          "id": "main-004",
+          "name": "Osso Buco",
+          "description": "Braised veal shanks with saffron risotto and gremolata",
+          "price": 34.99,
+          "image": "/images/osso-buco.jpg",
+          "dietary": ["gluten-free"],
+          "allergens": ["dairy"],
+          "available": true,
+          "foodpandaUrl": "https://foodpanda.com/restaurant/bella-vista/dish/main-004"
+        }
+      ]
+    },
+    "desserts": {
+      "name": "Desserts",
+      "description": "Sweet endings to your perfect meal",
+      "items": [
+        {
+          "id": "dess-001",
+          "name": "Chocolate Lava Cake",
+          "description": "Warm chocolate cake with molten center and vanilla gelato",
+          "price": 9.99,
+          "image": "/images/chocolate-lava-cake.jpg",
+          "dietary": ["vegetarian"],
+          "allergens": ["dairy", "eggs", "gluten"],
+          "available": true,
+          "foodpandaUrl": "https://foodpanda.com/restaurant/bella-vista/dish/dess-001"
+        },
+        {
+          "id": "dess-002",
+          "name": "Classic Tiramisu",
+          "description": "Traditional Italian dessert with coffee-soaked ladyfingers",
+          "price": 8.99,
+          "image": "/images/tiramisu.jpg",
+          "dietary": ["vegetarian"],
+          "allergens": ["dairy", "eggs", "gluten"],
+          "available": true,
+          "foodpandaUrl": "https://foodpanda.com/restaurant/bella-vista/dish/dess-002"
+        },
+        {
+          "id": "dess-003",
+          "name": "Lemon Panna Cotta",
+          "description": "Silky smooth panna cotta with fresh berry compote",
+          "price": 7.99,
+          "image": "/images/lemon-panna-cotta.jpg",
+          "dietary": ["vegetarian", "gluten-free"],
+          "allergens": ["dairy"],
+          "available": true,
+          "foodpandaUrl": "https://foodpanda.com/restaurant/bella-vista/dish/dess-003"
+        }
+      ]
+    },
+    "drinks": {
+      "name": "Beverages",
+      "description": "Carefully selected wines and artisanal beverages",
+      "items": [
+        {
+          "id": "drink-001",
+          "name": "House Wine Selection",
+          "description": "Red, white, or rosé from our curated collection",
+          "price": 8.99,
+          "image": "/images/house-wine.jpg",
+          "dietary": ["vegan"],
+          "allergens": ["sulfites"],
+          "available": true,
+          "foodpandaUrl": "https://foodpanda.com/restaurant/bella-vista/dish/drink-001"
+        },
+        {
+          "id": "drink-002",
+          "name": "Craft Cocktails",
+          "description": "Signature cocktails crafted by our mixologist",
+          "price": 12.99,
+          "image": "/images/craft-cocktails.jpg",
+          "dietary": [],
+          "allergens": [],
+          "available": true,
+          "foodpandaUrl": "https://foodpanda.com/restaurant/bella-vista/dish/drink-002"
+        },
+        {
+          "id": "drink-003",
+          "name": "Artisanal Coffee",
+          "description": "Locally roasted espresso and specialty coffee drinks",
+          "price": 4.99,
+          "image": "/images/artisanal-coffee.jpg",
+          "dietary": ["vegan-option"],
+          "allergens": ["dairy-option"],
+          "available": true,
+          "foodpandaUrl": "https://foodpanda.com/restaurant/bella-vista/dish/drink-003"
+        }
+      ]
+    }
+  }
+}
