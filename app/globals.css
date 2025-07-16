@@ -1,70 +1,158 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* 🎨 IMPORT TAILWIND CSS */
+@tailwind base; /* Reset styles & base elements */
+@tailwind components; /* Component classes */
+@tailwind utilities; /* Utility classes */
 
+/* 🌈 CSS VARIABLES FOR THEMING */
 @layer base {
   :root {
-    /* LIGHT MODE COLORS - Based on your logo */
-    --background: 0 0% 100%;
-    --foreground: 185 84% 15%; /* Dark teal for text */
-    --card: 0 0% 100%;
-    --card-foreground: 185 84% 15%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 185 84% 15%;
-    --primary: 185 84% 25%; /* Main teal color from logo */
-    --primary-foreground: 48 96% 89%;
+    /* 🌞 LIGHT MODE COLORS (Based on your restaurant logo) */
+    --background: 0 0% 100%; /* Pure white background */
+    --foreground: 185 84% 15%; /* Dark teal text */
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 185 84% 15%; /* Dark teal text on cards */
+    --popover: 0 0% 100%; /* White popups */
+    --popover-foreground: 185 84% 15%; /* Dark teal text in popups */
+
+    /* 🎯 BRAND COLORS */
+    --primary: 185 84% 25%; /* Main teal from logo */
+    --primary-foreground: 48 96% 89%; /* Light text on teal */
     --secondary: 48 96% 53%; /* Golden yellow from logo */
-    --secondary-foreground: 185 84% 15%;
-    --muted: 185 10% 95%;
-    --muted-foreground: 185 5% 40%;
+    --secondary-foreground: 185 84% 15%; /* Dark teal text on golden */
+
+    /* 🔇 MUTED COLORS */
+    --muted: 185 10% 95%; /* Very light teal background */
+    --muted-foreground: 185 5% 40%; /* Medium teal text */
+
+    /* ✨ ACCENT COLORS */
     --accent: 48 96% 53%; /* Golden accent */
-    --accent-foreground: 185 84% 15%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 185 20% 90%;
-    --input: 185 20% 90%;
-    --ring: 185 84% 25%;
-    --radius: 0.5rem;
+    --accent-foreground: 185 84% 15%; /* Dark teal text on golden */
+
+    /* 🚨 SYSTEM COLORS */
+    --destructive: 0 84% 60%; /* Red for errors */
+    --destructive-foreground: 0 0% 98%; /* White text on red */
+
+    /* 🖼️ BORDERS & INPUTS */
+    --border: 185 20% 90%; /* Light teal borders */
+    --input: 185 20% 90%; /* Light teal input backgrounds */
+    --ring: 185 84% 25%; /* Teal focus rings */
+
+    /* 📐 BORDER RADIUS */
+    --radius: 0.5rem; /* 8px rounded corners */
   }
 
+  /* 🌙 DARK MODE COLORS */
   .dark {
-    /* DARK MODE COLORS - Darker version of logo colors */
     --background: 185 84% 8%; /* Very dark teal background */
     --foreground: 48 96% 89%; /* Light golden text */
-    --card: 185 84% 10%;
-    --card-foreground: 48 96% 89%;
-    --popover: 185 84% 10%;
-    --popover-foreground: 48 96% 89%;
-    --primary: 48 96% 53%; /* Golden primary in dark mode */
-    --primary-foreground: 185 84% 15%;
+    --card: 185 84% 10%; /* Dark teal cards */
+    --card-foreground: 48 96% 89%; /* Light golden text on cards */
+    --popover: 185 84% 10%; /* Dark teal popups */
+    --popover-foreground: 48 96% 89%; /* Light golden text in popups */
+
+    /* 🎯 BRAND COLORS (INVERTED) */
+    --primary: 48 96% 53%; /* Golden becomes primary in dark */
+    --primary-foreground: 185 84% 15%; /* Dark teal text on golden */
     --secondary: 185 84% 20%; /* Darker teal secondary */
-    --secondary-foreground: 48 96% 89%;
-    --muted: 185 84% 15%;
-    --muted-foreground: 185 10% 65%;
+    --secondary-foreground: 48 96% 89%; /* Light golden text */
+
+    /* 🔇 MUTED COLORS */
+    --muted: 185 84% 15%; /* Dark teal background */
+    --muted-foreground: 185 10% 65%; /* Light teal text */
+
+    /* ✨ ACCENT COLORS */
     --accent: 48 96% 53%; /* Golden accent remains */
-    --accent-foreground: 185 84% 15%;
-    --destructive: 0 62% 50%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 185 84% 20%;
-    --input: 185 84% 20%;
-    --ring: 48 96% 53%;
+    --accent-foreground: 185 84% 15%; /* Dark teal text */
+
+    /* 🚨 SYSTEM COLORS */
+    --destructive: 0 62% 50%; /* Darker red for dark mode */
+    --destructive-foreground: 0 0% 98%; /* White text on red */
+
+    /* 🖼️ BORDERS & INPUTS */
+    --border: 185 84% 20%; /* Dark teal borders */
+    --input: 185 84% 20%; /* Dark teal input backgrounds */
+    --ring: 48 96% 53%; /* Golden focus rings */
   }
 }
 
+/* 🎨 BASE STYLES */
 @layer base {
+  /* Apply border color to all elements */
   * {
     @apply border-border;
   }
+
+  /* Set body background and text color */
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* 📱 RESPONSIVE TYPOGRAPHY */
+  h1 {
+    @apply text-4xl font-bold tracking-tight lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+
+  /* 🔗 LINK STYLES */
+  a {
+    @apply transition-colors hover:text-primary;
+  }
+
+  /* 📝 FORM STYLES */
+  input,
+  textarea,
+  select {
+    @apply transition-colors;
+  }
+
+  /* 🎯 FOCUS STYLES (Accessibility) */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+/* 🎬 CUSTOM ANIMATIONS */
+@layer components {
+  /* Loading spinner */
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+
+  /* Fade in animation */
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
   }
 }
 
 /* 
-EXPLANATION:
-- CSS custom properties (variables) define colors for light and dark modes
-- Light mode uses white background with dark teal text
-- Dark mode uses dark teal background with golden text
-- Colors are in HSL format for better manipulation
-- These variables are used by Tailwind's color system
+📝 EXPLANATION:
+- CSS variables allow colors to change between light/dark mode
+- HSL color format (Hue, Saturation, Lightness) is easier to manipulate
+- @layer organizes CSS for better performance
+- Focus styles improve accessibility
+- Custom animations enhance user experience
+- Colors are based on your restaurant logo (teal mountains, golden text)
 */
