@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -71,7 +72,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -80,12 +80,25 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )
 }
+
+/* 
+EXPLANATION OF CHANGES:
+1. Wrapped entire app with ThemeProvider for theme context
+2. Added suppressHydrationWarning to prevent theme hydration issues
+3. ThemeProvider props:
+   - attribute="class": Uses class-based theme switching
+   - defaultTheme="light": Starts in light mode
+   - enableSystem: Respects user's system preference
+   - disableTransitionOnChange: Prevents flash during theme switch
+*/

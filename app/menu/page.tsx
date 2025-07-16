@@ -14,31 +14,31 @@ const menuData = {
   dumplings: [
     {
       id: 1,
-      name: "Traditional Momos",
+      name: "Beef Momos",
       description: "Steamed dumplings filled with seasoned yak meat and vegetables, served with spicy chutney",
       price: 450,
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/dumplings(1).png",
       dietary: ["halal"],
-      foodpandaUrl: "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/1",
+      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/1",
     },
     {
       id: 2,
-      name: "Vegetable Momos",
+      name: "Chicken Momos",
       description: "Steamed dumplings stuffed with fresh mountain vegetables and herbs",
       price: 350,
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/dumplings(1).png",
       dietary: ["vegetarian", "halal"],
-      foodpandaUrl: "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/2",
+      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/2",
     },
-    {
-      id: 3,
-      name: "Fried Momos",
-      description: "Crispy fried dumplings with meat filling, served with tangy dipping sauce",
-      price: 500,
-      image: "/placeholder.svg?height=200&width=300",
-      dietary: ["halal"],
-      foodpandaUrl: "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/3",
-    },
+    // {
+    //   id: 3,
+    //   name: "Fried Momos",
+    //   description: "Crispy fried dumplings with meat filling, served with tangy dipping sauce",
+    //   price: 500,
+    //   image: "/dumplings(1).png",
+    //   dietary: ["halal"],
+    //   foodpandaUrl: "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/3",
+    // },
   ],
   noodles: [
     {
@@ -48,7 +48,7 @@ const menuData = {
       price: 650,
       image: "/placeholder.svg?height=200&width=300",
       dietary: ["halal"],
-      foodpandaUrl: "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/4",
+      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foodss/dish/4",
     },
     {
       id: 5,
@@ -57,7 +57,7 @@ const menuData = {
       price: 550,
       image: "/placeholder.svg?height=200&width=300",
       dietary: ["vegetarian", "halal"],
-      foodpandaUrl: "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/5",
+      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/5",
     },
     {
       id: 6,
@@ -66,7 +66,7 @@ const menuData = {
       price: 600,
       image: "/placeholder.svg?height=200&width=300",
       dietary: ["halal"],
-      foodpandaUrl: "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/6",
+      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/6",
     },
   ],
   breads: [
@@ -77,7 +77,7 @@ const menuData = {
       price: 250,
       image: "/placeholder.svg?height=200&width=300",
       dietary: ["vegetarian", "halal"],
-      foodpandaUrl: "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/7",
+      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/7",
     },
     {
       id: 8,
@@ -86,7 +86,7 @@ const menuData = {
       price: 80,
       image: "/placeholder.svg?height=200&width=300",
       dietary: ["vegetarian", "halal"],
-      foodpandaUrl: "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/8",
+      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/8",
     },
     {
       id: 9,
@@ -95,7 +95,7 @@ const menuData = {
       price: 400,
       image: "/placeholder.svg?height=200&width=300",
       dietary: ["halal"],
-      foodpandaUrl: "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/9",
+      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/9",
     },
   ],
   beverages: [
@@ -106,7 +106,7 @@ const menuData = {
       price: 150,
       image: "/placeholder.svg?height=200&width=300",
       dietary: ["vegetarian", "halal"],
-      foodpandaUrl: "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/10",
+      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/10",
     },
     {
       id: 11,
@@ -115,7 +115,7 @@ const menuData = {
       price: 200,
       image: "/placeholder.svg?height=200&width=300",
       dietary: ["vegetarian", "vegan", "halal"],
-      foodpandaUrl: "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/11",
+      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/11",
     },
     {
       id: 12,
@@ -124,7 +124,7 @@ const menuData = {
       price: 120,
       image: "/placeholder.svg?height=200&width=300",
       dietary: ["vegetarian", "halal"],
-      foodpandaUrl: "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/12",
+      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/12",
     },
   ],
 }
@@ -301,7 +301,7 @@ export default function MenuPage() {
           <h2 className="text-3xl font-bold mb-4">Ready to Order?</h2>
           <p className="text-lg mb-6 opacity-90">Get your favorite dishes delivered fresh to your door</p>
           <Button asChild size="lg" variant="secondary">
-            <Link href="https://foodpanda.com/restaurant/bella-vista" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.foodpanda.pk/restaurant/n7sn/gb-mountain-foods" target="_blank" rel="noopener noreferrer">
               Order on Foodpanda
             </Link>
           </Button>
