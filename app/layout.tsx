@@ -133,11 +133,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning>
         {/* 🌙 THEME PROVIDER: Enables dark/light mode switching */}
         <ThemeProvider
           attribute="class" // Use class-based theme switching
-          defaultTheme="light" // Start in light mode
+          defaultTheme="light" // Start in lisuppressHydrationWarningght mode
           enableSystem // Respect user's system preference
           disableTransitionOnChange // Prevent flash during theme change
         >
