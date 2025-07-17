@@ -272,6 +272,7 @@ export default function HomePage() {
               type="email"
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+              suppressHydrationWarning
             />
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8">Subscribe</Button>
           </div>
