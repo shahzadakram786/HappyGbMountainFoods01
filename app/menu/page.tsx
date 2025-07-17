@@ -30,15 +30,6 @@ const menuData = {
       dietary: ["vegetarian", "halal"],
       foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/2",
     },
-    // {
-    //   id: 3,
-    //   name: "Fried Momos",
-    //   description: "Crispy fried dumplings with meat filling, served with tangy dipping sauce",
-    //   price: 500,
-    //   image: "/dumplings(1).png",
-    //   dietary: ["halal"],
-    //   foodpandaUrl: "https://foodpanda.com.pk/restaurant/happy-gb-mountain-foods/dish/3",
-    // },
   ],
   noodles: [
     {
@@ -48,7 +39,7 @@ const menuData = {
       price: 650,
       image: "/laqmanAuthenic.png",
       dietary: ["halal"],
-      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foodss/dish/4",
+      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/4",
     },
     {
       id: 5,
@@ -144,6 +135,9 @@ const dietaryFilters = [
   { id: "halal", name: "Halal" },
 ]
 
+// WhatsApp business number (replace with actual number)
+const WHATSAPP_NUMBER = "+923251657929" // Replace with the actual WhatsApp business number
+
 export default function MenuPage() {
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [selectedDietary, setSelectedDietary] = useState("all")
@@ -168,11 +162,18 @@ export default function MenuPage() {
     return matchesCategory && matchesDietary && matchesSearch
   })
 
+  // Function to generate WhatsApp link with item details
+  const generateWhatsAppLink = (item) => {
+    const message = `Hello! I'm interested in ordering ${item.name} (Price: PKR ${item.price}). Can you provide details about this item and delivery options?`
+    const encodedMessage = encodeURIComponent(message)
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`
+  }
+
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen">
       {/* Header */}
       <section className="bg-secondary/20 shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-8 ">
+        <div className="max-w-6xl mx-auto px-4 py-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-400 mb-4">Authentic GB Mountain Menu</h1>
             <p className="text-lg text-gray-600 mb-6">
@@ -183,7 +184,6 @@ export default function MenuPage() {
         </div>
       </section>
 
-    {/* <section className="flex flex-row items-center py-8"> */}
       {/* Filters */}
       <section className="bg-background white border-b">
         <div className="max-w-6xl mx-auto px-4 py-6">
@@ -281,9 +281,9 @@ export default function MenuPage() {
                     <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
                     <p className="text-gray-600 mb-4 text-sm">{item.description}</p>
                     <div className="flex justify-between items-center">
-                      <span className="text-2xl font-bold text-amber-600">${item.price}</span>
+                      <span className="text-2xl font-bold text-amber-600">PKR {item.price}</span>
                       <Button asChild className="bg-amber-600 hover:bg-amber-700">
-                        <Link href={item.foodpandaUrl} target="_blank" rel="noopener noreferrer">
+                        <Link href={generateWhatsAppLink(item)} target="_blank" rel="noopener noreferrer">
                           Order Now
                         </Link>
                       </Button>
@@ -295,8 +295,6 @@ export default function MenuPage() {
           )}
         </div>
       </section>
-
-    {/* </section>   */}
 
       {/* Order CTA */}
       <section className="bg-amber-600 text-white py-12">

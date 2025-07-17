@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -11,6 +10,13 @@ const inter = Inter({
   display: "swap",
   variable: "--font-inter",
 });
+
+export const viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#0f766e" },
+    { media: "(prefers-color-scheme: dark)", color: "#f59e0b" },
+  ],
+};
 
 export const metadata: Metadata = {
   title: {
@@ -78,13 +84,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#0f766e" },
-    { media: "(prefers-color-scheme: dark)", color: "#f59e0b" },
-  ],
-  manifest: "/manifest.json", // Uncomment or add back
+  manifest: "/manifest.json",
   icons: {
-    icon: "/favicon.ico", // Add this to reference favicon
+    icon: "/favicon.ico",
   },
   other: {
     "google-site-verification": "your-verification-code",
