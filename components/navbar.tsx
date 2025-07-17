@@ -45,12 +45,14 @@ export default function Navbar() {
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GbLogo-BWIUzU0E4XnqgpE3Ice9QmQEK4AZkL.png"
               alt="Happy GB Mountain Foods Logo"
-              width={40}
-              height={40}
+              width={50}
+              height={50}
               className="object-contain"
               priority // Load logo immediately
             />
-            <span className="font-bold text-xl text-foreground">Happy GB Mountain Foods</span>
+            <span className="hidden text-lg lg:flex font-bold text-foreground">Happy GB Mountain Foods</span>
+            <span className="font-bold text-xl text-foreground  lg:hidden xlg:hidden">HGBMF</span>
+
           </Link>
 
           {/* 🖥️ DESKTOP NAVIGATION */}
@@ -74,7 +76,7 @@ export default function Navbar() {
               className="flex items-center text-muted-foreground hover:text-primary transition-colors duration-200"
             >
               <Phone className="w-4 h-4 mr-1" />
-              <span className="text-sm">+92 31 2979-0711</span>
+              <span className="text-sm ">+92 31 2979-0711</span>
             </a>
 
             {/* 🌙 THEME TOGGLE */}
@@ -138,7 +140,7 @@ export default function Navbar() {
                       className="flex items-center text-muted-foreground hover:text-primary transition-colors"
                     >
                       <Phone className="w-4 h-4 mr-2" />
-                      <span>+92 51 123-4567</span>
+                      <span>+92 31 2979-0711</span>
                     </a>
 
                     <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
