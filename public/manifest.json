@@ -1,0 +1,16 @@
+
+{
+    "name": "Happy GB Mountain Foods",
+    "short_name": "GB Foods",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0f766e",
+    "icons": [
+      {
+        "src": "/favicon.ico",
+        "sizes": "64x64",
+        "type": "image/x-icon"
+      }
+    ]
+  }
