@@ -66,11 +66,11 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600">
-                    123 Culinary Street
+                  Shop No. 3, Afandi Colony
                     <br />
-                    Downtown District
+                    Sadiqabad, Rawalpindi
                     <br />
-                    City, State 12345
+                    Punjab, Pakistan
                   </p>
                 </CardContent>
               </Card>
@@ -83,7 +83,7 @@ export default function ContactPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">(555) 123-4567</p>
+                  <p className="text-gray-600"> +92 34 697-90711</p>
                 </CardContent>
               </Card>
 

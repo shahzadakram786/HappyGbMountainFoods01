@@ -136,7 +136,7 @@ const dietaryFilters = [
 ]
 
 // WhatsApp business number (replace with actual number)
-const WHATSAPP_NUMBER = "+923251657929" // Replace with the actual WhatsApp business number
+const WHATSAPP_NUMBER = "+923469790711" // Replace with the actual WhatsApp business number
 
 export default function MenuPage() {
   const [selectedCategory, setSelectedCategory] = useState("all")

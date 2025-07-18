@@ -43,11 +43,11 @@ export default function Footer() {
                   Mountain Menu
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/reservations" className="text-gray-300 hover:text-emerald-400 transition-colors">
                   Table Booking
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/about" className="text-gray-300 hover:text-emerald-400 transition-colors">
                   Our Heritage
@@ -82,8 +82,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 text-emerald-400 mr-2" />
-                <a href="tel:+925112345678" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  +92 51 123-4567
+                <a href="tel:+923469790711" className="text-gray-300 hover:text-emerald-400 transition-colors">
+                  +92 34 697-90711
                 </a>
               </li>
               <li className="flex items-center">
