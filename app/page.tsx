@@ -1,9 +1,12 @@
+'use client'
+
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Star, Clock, MapPin, Phone } from "lucide-react"
+import { useEffect } from "react"
 
 // Mock data - featuring Gilgit-Baltistan cuisine
 const featuredDishes = [
@@ -36,28 +39,43 @@ const featuredDishes = [
   },
 ]
 
-const testimonials = [
-  {
-    name: "Ahmed Khan",
-    rating: 5,
-    comment: "Authentic taste of Gilgit! The momos remind me of my hometown. Excellent quality!",
-    date: "2 days ago",
-  },
-  {
-    name: "Fatima Ali",
-    rating: 5,
-    comment: "Best Lagman in Rawalpindi! The flavors are just like my grandmother's recipe.",
-    date: "1 week ago",
-  },
-  {
-    name: "Muhammad Hassan",
-    rating: 5,
-    comment: "Amazing mountain food experience. The Daw Daw bread is incredibly fresh!",
-    date: "2 weeks ago",
-  },
-]
+// const testimonials = [
+//   {
+//     name: "Ahmed Khan",
+//     rating: 5,
+//     comment: "Authentic taste of Gilgit! The momos remind me of my hometown. Excellent quality!",
+//     date: "2 days ago",
+//   },
+//   {
+//     name: "Fatima Ali",
+//     rating: 5,
+//     comment: "Best Lagman in Rawalpindi! The flavors are just like my grandmother's recipe.",
+//     date: "1 week ago",
+//   },
+//   {
+//     name: "Muhammad Hassan",
+//     rating: 5,
+//     comment: "Amazing mountain food experience. The Daw Daw bread is incredibly fresh!",
+//     date: "2 weeks ago",
+//   },
+// ]
+
 
 export default function HomePage() {
+
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://static.elfsight.com/platform/platform.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script); // Cleanup on component unmount
+    };
+  }, []);
+
+
+
   return (
     <div className="min-h-screen">
       {/* Hero Section - Updated colors */}
@@ -190,32 +208,35 @@ export default function HomePage() {
 
       {/* Testimonials */}
       <section className="py-16 px-4 bg-background">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">What Our Customers Say</h2>
-            <p className="text-lg text-muted-foreground">Authentic reviews from our valued guests</p>
-          </div>
+    <div className="max-w-6xl mx-auto">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">What Our Customers Say</h2>
+        <p className="text-lg text-muted-foreground">Authentic reviews from our valued guests</p>
+      </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="p-6 bg-card">
-                <CardContent className="p-0">
-                  <div className="flex items-center mb-4">
-                    <div className="flex text-secondary">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-current" />
-                      ))}
-                    </div>
-                    <span className="ml-2 text-sm text-muted-foreground">{testimonial.date}</span>
-                  </div>
-                  <p className="text-muted-foreground mb-4">"{testimonial.comment}"</p>
-                  <p className="font-semibold text-card-foreground">- {testimonial.name}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+      <div className="grid md:grid-cols-3 gap-8">
+        {/* Replaced static testimonials with Elfsight widget */}
+        {/* col-span-3 makes the widget full-width for better visibility */}
+        <div className="col-span-3">
+          {/* Elfsight widget div from provided embed code */}
+          <div className="elfsight-app-35c39383-72db-4402-ad9d-8bc6b966e779" data-elfsight-app-lazy></div>
+          {/* Added button to encourage reviews, styled with primary teal color */}
+          <Button
+            asChild
+            className="mt-6 bg-primary hover:bg-primary/90 text-primary-foreground"
+          >
+            <Link
+              href="https://www.google.com/maps/place/Happy+GB+Mountain+Foods"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Leave a Review
+            </Link>
+          </Button>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
       {/* Quick Info - Updated colors */}
       <section className="py-16 px-4 bg-primary text-primary-foreground">

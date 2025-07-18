@@ -45,13 +45,14 @@ export default function Navbar() {
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GbLogo-BWIUzU0E4XnqgpE3Ice9QmQEK4AZkL.png"
               alt="Happy GB Mountain Foods Logo"
-              width={50}
-              height={50}
-              className="object-contain"
+              width={100}
+              height={100}
+              className="object-cover mt-5"
+
               priority // Load logo immediately
             />
             <span className="hidden text-lg lg:flex font-bold text-foreground">Happy GB Mountain Foods</span>
-            <span className="font-bold text-xl text-foreground  lg:hidden xlg:hidden">HGBMF</span>
+            {/* <span className="font-bold text-xl text-foreground  lg:hidden xlg:hidden">HGBMF</span> */}
 
           </Link>
 
@@ -111,9 +112,9 @@ export default function Navbar() {
                       <Image
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GbLogo-BWIUzU0E4XnqgpE3Ice9QmQEK4AZkL.png"
                         alt="Happy GB Mountain Foods Logo"
-                        width={32}
-                        height={32}
-                        className="object-contain"
+                        width={60}
+                        height={60}
+                        className=" "
                       />
                       <span className="font-bold text-lg text-foreground">Happy GB Foods</span>
                     </Link>
