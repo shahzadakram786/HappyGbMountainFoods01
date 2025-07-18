@@ -225,7 +225,7 @@ export default function HomePage() {
               <Clock className="w-12 h-12 text-secondary mb-4" />
               <h3 className="text-xl font-semibold mb-2">Opening Hours</h3>
               <p className="opacity-90">
-                Daily: 11:00 AM - 11:00 PM
+                Daily: 12:00 AM - 12:00 PM
                 <br />
                 Friday: 2:00 PM - 11:00 PM
                 <br />
@@ -247,9 +247,9 @@ export default function HomePage() {
               <Phone className="w-12 h-12 text-secondary mb-4" />
               <h3 className="text-xl font-semibold mb-2">Contact</h3>
               <p className="opacity-90">
-                Phone: +92 51 123-4567
+                Phone: +92 312 979-0711
                 <br />
-                WhatsApp: +92 300 123-4567
+                WhatsApp: +92 346 979-0711
                 <br />
                 <Button asChild variant="link" className="text-secondary p-0 h-auto hover:text-secondary/80">
                   <Link href="/contact">Send Message</Link>

@@ -72,11 +72,11 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-4">
             {/* 📞 PHONE NUMBER */}
             <a
-              href="tel:+923129790711"
+              href="tel:+923469790711"
               className="flex items-center text-muted-foreground hover:text-primary transition-colors duration-200"
             >
               <Phone className="w-4 h-4 mr-1" />
-              <span className="text-sm ">+92 31 2979-0711</span>
+              <span className="text-sm ">+92 34 6979-0711</span>
             </a>
 
             {/* 🌙 THEME TOGGLE */}
@@ -136,11 +136,11 @@ export default function Navbar() {
                   {/* 📱 MOBILE FOOTER */}
                   <div className="mt-auto space-y-4">
                     <a
-                      href="tel:+925112345678"
+                      href="tel:+923469790711"
                       className="flex items-center text-muted-foreground hover:text-primary transition-colors"
                     >
                       <Phone className="w-4 h-4 mr-2" />
-                      <span>+92 31 2979-0711</span>
+                      <span>+92 34 6979-0711</span>
                     </a>
 
                     <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
