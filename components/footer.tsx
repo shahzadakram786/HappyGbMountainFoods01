@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -9,10 +10,19 @@ export default function Footer() {
           {/* Restaurant Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">GB</span>
-              </div>
-              <span className="font-bold text-xl">Happy GB Mountain Foods</span>
+            <div className="flex items-center justify-between pb-4 border-b border-border">
+                    <Link href="/" className="flex items-center space-x-2" >
+                      <Image
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GbLogo-BWIUzU0E4XnqgpE3Ice9QmQEK4AZkL.png"
+                        alt="Happy GB Mountain Foods Logo"
+                        width={60}
+                        height={60}
+                        className=" "
+                      />
+                      <span className="font-bold text-lg text-foreground">Happy GB Foods</span>
+                    </Link>
+                  </div>
+             
             </div>
             <p className="text-gray-300 mb-4">
               Authentic flavors from the majestic mountains of Gilgit-Baltistan, bringing traditional recipes and
