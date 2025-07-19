@@ -88,6 +88,7 @@ const menuData = {
       dietary: ["halal"],
       foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/9",
     },
+  
   ],
   beverages: [
     {
@@ -118,6 +119,92 @@ const menuData = {
       foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/12",
     },
   ],
+  cakes: [
+    {
+      id: 13,
+      name: "Walnut Cake",
+      description: "Rich walnut cake with a buttery texture, freshly baked upon order",
+      price: 1200,
+      image: "/wallnutCake.png",
+      dietary: ["vegetarian", "halal"],
+      byOrderOnly: true,
+    },
+    {
+      id: 14,
+      name: "Banana Cake",
+      description: "Moist banana cake with a hint of cinnamon, prepared fresh upon order",
+      price: 1000,
+      image: "/BananaCake.png",
+      dietary: ["vegetarian", "halal"],
+      byOrderOnly: true,
+    },
+    {
+      id: 15,
+      name: "Vanilla Cream Cake",
+      description: "Light vanilla sponge layered with fresh cream, made to order",
+      price: 1500,
+      image: "/VanillaCake.png",
+      dietary: ["vegetarian", "halal"],
+      byOrderOnly: true,
+    },
+    {
+      id: 16,
+      name: "Chocolate Cream Cake",
+      description: "Decadent chocolate cake with rich cream frosting, crafted fresh upon order",
+      price: 1600,
+      image: "/ChocolateCake.png",
+      dietary: ["vegetarian", "halal"],
+      byOrderOnly: true,
+    },
+  ],
+  // Added Breakfast category, treated as regular items (not by order only)
+  breakfast: [
+    {
+      id: 17,
+      name: "Fried Egg",
+      description: "Sunny-side-up egg with traditional spices, served with paratha",
+      price: 150,
+      image: "/halfFry.png",
+      dietary: ["halal"],
+      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/17",
+    },
+    {
+      id: 19,
+      name: "Tea",
+      description: "Classic Pakistani chai with milk and cardamom",
+      price: 100,
+      image: "/chai.png",
+      dietary: ["vegetarian", "halal"],
+      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/19",
+    },
+    {
+      id: 20,
+      name: "Bowl Tea",
+      description: "Traditional Gilgit-Baltistan bowl tea with a rich, creamy texture",
+      price: 120,
+      image: "/BowlChai.png",
+      dietary: ["vegetarian", "halal"],
+      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/20",
+    },
+    {
+      id: 21,
+      name: "Bread",
+      description: "Freshly baked local bread, served with butter or jam",
+      price: 80,
+      image: "/Bread.png",
+      dietary: ["vegetarian", "halal"],
+      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/21",
+    },
+    {
+      id: 22,
+      name: "Arzoq",
+      description: "Traditional Gilgit-Baltistan breakfast porridge with nuts and dried fruits",
+      price: 200,
+      image: "/placeholder.svg?height=200&width=300",
+      dietary: ["vegetarian", "halal"],
+      foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/22",
+    },
+  ],
 }
 
 const categories = [
@@ -126,6 +213,8 @@ const categories = [
   { id: "noodles", name: "Lagman & Noodles" },
   { id: "breads", name: "Traditional Breads" },
   { id: "beverages", name: "Mountain Beverages" },
+  { id: "cakes", name: "Custom Cakes" },
+  { id: "breakfast", name: "Breakfast" }, // Added breakfast category
 ]
 
 const dietaryFilters = [
@@ -135,8 +224,8 @@ const dietaryFilters = [
   { id: "halal", name: "Halal" },
 ]
 
-// WhatsApp business number (replace with actual number)
-const WHATSAPP_NUMBER = "+923469790711" // Replace with the actual WhatsApp business number
+// WhatsApp business number
+const WHATSAPP_NUMBER = "+923469790711"
 
 export default function MenuPage() {
   const [selectedCategory, setSelectedCategory] = useState("all")
@@ -164,7 +253,10 @@ export default function MenuPage() {
 
   // Function to generate WhatsApp link with item details
   const generateWhatsAppLink = (item) => {
-    const message = `Hello! I'm interested in ordering ${item.name} (Price: PKR ${item.price}). Can you provide details about this item and delivery options?`
+    // Custom message only for cakes (byOrderOnly: true)
+    const message = item.byOrderOnly
+      ? `Hello! I'd like to order a ${item.name} (Price: PKR ${item.price}). Please confirm availability and preparation time for this made-to-order cake.`
+      : `Hello! I'm interested in ordering ${item.name} (Price: PKR ${item.price}). Can you provide details about this item and delivery options?`
     const encodedMessage = encodeURIComponent(message)
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`
   }
@@ -296,13 +388,83 @@ export default function MenuPage() {
         </div>
       </section>
 
+      {/* Custom Cakes Section (Available by Order) */}
+      <section className="py-8">
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Show Cakes section only if filtered items include cakes */}
+          {filteredItems.some((item) => item.byOrderOnly) && (
+            <>
+              <h2 className="text-2xl font-bold mb-6 text-foreground">Custom Cakes (Available by Order)</h2>
+              <p className="text-gray-600 mb-6 text-sm">
+                Our cakes are freshly baked upon order. Please contact us via WhatsApp to place your order and confirm preparation time.
+              </p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredItems
+                  .filter((item) => item.byOrderOnly)
+                  .map((item) => (
+                    <Card key={item.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                      <div className="relative h-48">
+                        <Image
+                          src={item.image || "/placeholder.svg"}
+                          alt={item.name}
+                          fill
+                          className="object-cover"
+                          loading="lazy"
+                        />
+                        <div className="absolute top-2 right-2 flex flex-wrap gap-1">
+                          <Badge variant="secondary" className="bg-primary text-primary-foreground">
+                            By Order Only
+                          </Badge>
+                          {item.dietary.map((diet) => (
+                            <Badge
+                              key={diet}
+                              variant="secondary"
+                              className={
+                                diet === "vegetarian"
+                                  ? "bg-green-100 text-green-800"
+                                  : diet === "vegan"
+                                    ? "bg-green-200 text-green-900"
+                                    : diet === "gluten-free"
+                                      ? "bg-blue-100 text-blue-800"
+                                      : "bg-gray-100 text-gray-800"
+                              }
+                            >
+                              {diet.charAt(0).toUpperCase() + diet.slice(1).replace("-", " ")}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                      <CardContent className="p-6">
+                        <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
+                        <p className="text-gray-600 mb-4 text-sm">{item.description}</p>
+                        <div className="flex justify-between items-center">
+                          <span className="text-2xl font-bold text-amber-600">PKR {item.price}</span>
+                          <Button
+                            asChild
+                            className="bg-amber-600 hover:bg-amber-700"
+                            aria-label={`Order ${item.name} via WhatsApp`}
+                          >
+                            <Link href={generateWhatsAppLink(item)} target="_blank" rel="noopener noreferrer">
+                              Order Now
+                            </Link>
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+              </div>
+            </>
+          )}
+        </div>
+      </section>
+
       {/* Order CTA */}
       <section className="bg-amber-600 text-white py-12">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Order?</h2>
           <p className="text-lg mb-6 opacity-90">Get your favorite dishes delivered fresh to your door</p>
           <Button asChild size="lg" variant="secondary">
-            <Link href="https://www.foodpanda.pk/restaurant/n7sn/gb-mountain-foods" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods" target="_blank" rel="noopener noreferrer">
               Order on Foodpanda
             </Link>
           </Button>
