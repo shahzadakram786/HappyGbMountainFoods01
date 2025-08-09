@@ -65,11 +65,11 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-primary-50">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-gray-900">Our Heritage Story</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white-900">Our Heritage Story</h2>
               <p className="text-lg text-gray-600 mb-6">
                 Happy GB Mountain Foods was established in 2018 with a mission to bring the authentic flavors of
                 Gilgit-Baltistan to the people of Rawalpindi. Our founder, originally from Hunza valley, wanted to share
