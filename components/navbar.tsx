@@ -85,7 +85,7 @@ export default function Navbar() {
 
             {/* 🎯 CTA BUTTON */}
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <Link href="https://www.foodpanda.pk/restaurant/n7sn/gb-mountain-foods">
+            <Link href="https://www.foodpanda.pk/restaurant/n7sn/gb-mountain-foods" target="blank">
                         Place an Order
                       </Link>
             </Button>
@@ -145,7 +145,7 @@ export default function Navbar() {
                     </a>
 
                     <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                      <Link href="https://www.foodpanda.pk/restaurant/n7sn/gb-mountain-foods" onClick={() => setIsOpen(false)}>
+                      <Link href="https://www.foodpanda.pk/restaurant/n7sn/gb-mountain-foods" target="blank" onClick={() => setIsOpen(false)}>
                         Place an Order
                       </Link>
                     </Button>

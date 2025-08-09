@@ -103,7 +103,7 @@ export default function HomePage() {
               size="lg"
               className="border-white text-white hover:bg-white hover:text-primary bg-transparent"
             >
-              <Link href="#">Place an Order</Link>
+              <Link href="https://www.foodpanda.pk/restaurant/n7sn/gb-mountain-foods" target="blank">Place an Order</Link>
             </Button>
           </div>
         </div>
