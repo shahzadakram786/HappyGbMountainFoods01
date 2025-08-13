@@ -76,9 +76,6 @@ export default function HomePage() {
 
 
 
-
-
-
   return (
     <div className="min-h-screen">
       {/* Hero Section - Updated colors */}
