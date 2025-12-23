@@ -141,7 +141,7 @@ const menuData: MenuData = {
       id: 13,
       name: "Walnut Cake",
       description: "Rich walnut cake with a buttery texture, freshly baked upon order",
-      price: 1200,
+      price: 3500,
       image: "/wallnutCake.png",
       dietary: ["vegetarian", "halal"],
       byOrderOnly: true,
@@ -150,7 +150,7 @@ const menuData: MenuData = {
       id: 14,
       name: "Banana Cake",
       description: "Moist banana cake with a hint of cinnamon, prepared fresh upon order",
-      price: 1000,
+      price: 250,
       image: "/BananaCake.png",
       dietary: ["vegetarian", "halal"],
       byOrderOnly: true,
@@ -168,7 +168,7 @@ const menuData: MenuData = {
       id: 16,
       name: "Chocolate Cream Cake",
       description: "Decadent chocolate cake with rich cream frosting, crafted fresh upon order",
-      price: 1600,
+      price: 1500,
       image: "/ChocolateCake.png",
       dietary: ["vegetarian", "halal"],
       byOrderOnly: true,
@@ -297,6 +297,143 @@ const menuData: MenuData = {
       foodpandaUrl: "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/36",
     },
   ],
+
+Local: [
+  {
+    "id": 37,
+    "name": "Chicken Qorma",
+    "description": "Creamy chicken curry cooked with traditional GB spices",
+    "price": 850,
+    "image": "https://fatimacooks.net/wp-content/uploads/2022/03/Pakistani-Chicken-Korma-500x375.jpg",
+    "dietary": ["halal"],
+    "foodpandaUrl": "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/37"
+  },
+  {
+    "id": 38,
+    "name": "Bhindi",
+    "description": "Stir-fried okra with tomatoes, onions, and local spices",
+    "price": 650,
+    "image": "https://www.pakistaneats.com/wp-content/uploads/2020/04/IMG_6698.jpg",
+    "dietary": ["vegetarian", "halal"],
+    "foodpandaUrl": "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/38"
+  },
+  {
+    "id": 39,
+    "name": "Lobia",
+    "description": "Black-eyed peas cooked in rich tomato-based gravy",
+    "price": 600,
+    "image": "https://pipingpotcurry.com/wp-content/uploads/2021/07/Black-eyed-peas-curry.-Lobia-Piping-Pot-Curry.jpg",
+    "dietary": ["vegetarian", "halal"],
+    "foodpandaUrl": "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/39"
+  },
+  {
+    "id": 40,
+    "name": "Chana",
+    "description": "Spicy chickpea curry with aromatic GB spices",
+    "price": 600,
+    "image": "https://www.seriouseats.com/thmb/2KtHVPso7I68piUvR0501CjHJyY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__03__20160328-channa-masala-recipe-8-2ab6195d55ae4068a8c1d36d7371f5f7.jpg",
+    "dietary": ["vegetarian", "halal"],
+    "foodpandaUrl": "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/40"
+  },
+  {
+    "id": 41,
+    "name": "Pota Kalji",
+    "description": "Traditional GB liver curry with bold spices, served with roti",
+    "price": 700,
+    "image": "https://recipe52.com/wp-content/uploads/2021/06/kaleji-liver-fry-12.jpg",
+    "dietary": ["halal"],
+    "foodpandaUrl": "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/41"
+  },
+  {
+    "id": 42,
+    "name": "Alu Gosht",
+    "description": "Tender mutton cooked with potatoes in rich GB-style gravy",
+    "price": 950,
+    "image": "https://indianambrosia.com/wp-content/uploads/2024/09/aloo-gosht_3980-2-2-500x375.jpg",
+    "dietary": ["halal"],
+    "foodpandaUrl": "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/42"
+  },
+  {
+    "id": 43,
+    "name": "Nihari",
+    "description": "Slow-cooked beef stew with rich spices, a GB favorite",
+    "price": 1000,
+    "image": "https://assets.bonappetit.com/photos/679d4fdb9f05469a3fb06856/16:9/w_4487,h_2524,c_limit/nihari_LEDE_V1_012225_0445_VOG_final.jpg",
+    "dietary": ["halal"],
+    "foodpandaUrl": "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/43"
+  },
+  {
+    "id": 44,
+    "name": "Mix Sabzi",
+    "description": "Mixed seasonal vegetables cooked with GB spices",
+    "price": 650,
+    "image": "https://fatimacooks.net/wp-content/uploads/2021/12/Mixed-Sabzi-Mix-Vegetable-Curry-500x375.jpg",
+    "dietary": ["vegetarian", "halal"],
+    "foodpandaUrl": "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/44"
+  },
+  {
+    "id": 45,
+    "name": "Palak",
+    "description": "Creamy spinach curry with local herbs, served with roti",
+    "price": 650,
+    "image": "https://jamilghar.com/wp-content/uploads/2023/09/Palak-Gosht7-500x375.jpg",
+    "dietary": ["vegetarian", "halal"],
+    "foodpandaUrl": "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/45"
+  },
+  {
+    "id": 46,
+    "name": "Kali Dal",
+    "description": "Black lentils slow-cooked with butter and spices",
+    "price": 600,
+    "image": "https://i0.wp.com/smittenkitchen.com/wp-content/uploads//2017/03/black-lentil-dal.jpg?fit=1200%2C800&ssl=1",
+    "dietary": ["vegetarian", "halal"],
+    "foodpandaUrl": "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/46"
+  },
+  {
+    "id": 47,
+    "name": "Mash Dal",
+    "description": "White urad dal cooked with creamy GB spices",
+    "price": 600,
+    "image": "https://www.pakistaneats.com/wp-content/uploads/2022/06/IMG_7284.jpg",
+    "dietary": ["vegetarian", "halal"],
+    "foodpandaUrl": "https://foodpanda.com.pk/restaurant/n7sn/gb-mountain-foods/dish/47"
+  }
+]
+,
+
+
+Chinese: [
+  {
+    "id": 56,
+    "name": "Chicken Manchurian with Fried Rice",
+    "description": "Crispy chicken in savory Manchurian sauce served with flavorful fried rice",
+    "price": 1200,
+    "image": "https://i0.wp.com/sconceandscone.com/wp-content/uploads/2021/01/7a011517-735f-411f-963c-c42ba25c6c2a.jpeg?fit=720%2C540&ssl=1",
+    "dietary": ["halal"],
+    "foodpandaUrl": ""
+  },
+  {
+    "id": 57,
+    "name": "Chicken Fried Rice",
+    "description": "Classic Chinese-style fried rice with chicken, vegetables & soy sauce",
+    "price": 900,
+    "image": "https://cicili.tv/wp-content/uploads/2024/08/Chicken-Fried-Rice-Small-2-1200x900.jpg",
+    "dietary": ["halal"],
+    "foodpandaUrl": ""
+  },
+  {
+    "id": 61,
+    "name": "Chicken Chow Mein",
+    "description": "Stir-fried noodles with tender chicken strips and fresh vegetables in soy sauce",
+    "price": 1050,
+    "image": "https://drivemehungry.com/wp-content/uploads/2020/08/chicken-chow-mein-16.jpg",
+    "dietary": ["halal"],
+    "foodpandaUrl": ""
+  }
+]
+,
+
+
   // dinner: [
   //   {
   //     id: 37,
@@ -404,7 +541,8 @@ const categories = [
   { id: "all", name: "All Items" },
   { id: "breakfast", name: "Breakfast" },
   { id: "lunch" , name: "Lunch & Dinner" },
-  // { id: "dinner", name: "Dinner" },
+  { id: "Local", name: "Local Foods" },
+  { id: "Chinese", name: "Chinese Foods"},
   { id: "dumplings", name: "Momos & Dumplings" },
   { id: "noodles", name: "Lagman & Noodles" },
   { id: "breads", name: "Traditional Breads" },

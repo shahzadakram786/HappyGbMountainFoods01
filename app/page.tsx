@@ -81,7 +81,7 @@ export default function HomePage() {
       {/* Hero Section - Updated colors */}
       <section className="relative h-screen flex items-center justify-center bg-gradient-to-r from-black/60 to-black/40">
         <Image
-          src="/Gilgit-Baltistan-Scenery.png"
+          src="/Gilgit-Baltistan-Scenery.jpg"
           alt="Beautiful mountain landscape of Gilgit-Baltistan with traditional food setup"
           fill
           className="object-cover -z-10"
