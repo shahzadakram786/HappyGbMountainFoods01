@@ -304,11 +304,11 @@ export default function HomePage() {
               <Clock className="w-12 h-12 text-secondary mb-4" />
               <h3 className="text-xl font-semibold mb-2">Opening Hours</h3>
               <p className="opacity-90">
-                Daily: 12:00 AM - 12:00 PM
+                
+               24/7 Service Available
                 <br />
-                Friday: 2:00 PM - 11:00 PM
+                Order Anytime via WhatsApp or with Foodpanda
                 <br />
-                (After Jummah Prayer)
               </p>
             </div>
             <div className="flex flex-col items-center">
@@ -344,7 +344,7 @@ export default function HomePage() {
       </section>
 
       {/* Newsletter Signup - Updated colors */}
-      <section className="py-16 px-4 bg-secondary/10">
+      {/* <section className="py-16 px-4 bg-secondary/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4 text-foreground">
             Stay Connected
@@ -365,7 +365,7 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
