@@ -37,7 +37,7 @@ const achievements = [
   },
   {
     icon: Clock,
-    title: "6 Years of Excellence",
+    title: "10 Years of Excellence",
     description: "Consistent quality and cultural authenticity",
   },
   {
@@ -201,19 +201,17 @@ export default function AboutPage() {
                 <div>
                   <h3 className="font-semibold text-gray-900">Hours</h3>
                   <p className="text-gray-600">
-                    Daily: 11:00 AM - 11:00 PM
+                    24/7 Service Available
                     <br />
-                    Friday: 2:00 PM - 11:00 PM
-                    <br />
-                    (After Jummah Prayer)
+                    Order Anytime via WhatsApp or with Foodpanda
                   </p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Contact</h3>
                   <p className="text-gray-600">
-                    Phone: +92 51 123-4567
+                    Phone: +92 312 979-0711
                     <br />
-                    WhatsApp: +92 300 123-4567
+                    WhatsApp: +92 312 979-0711
                     <br />
                     Email: info@happygbfoods.com
                   </p>
@@ -222,7 +220,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.123456789!2d73.0479!3d33.6844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDQxJzA0LjAiTiA3M8KwMDInNTIuNCJF!5e0!3m2!1sen!2spk!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2673.1130916398024!2d73.07790477475217!3d33.633136073317665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df9588690ff4cd%3A0x44a9e3263439699f!2sHappy%20GB%20Mountain%20Foods!5e1!3m2!1sen!2s!4v1752829950891!5m2!1sen!2s" 
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
